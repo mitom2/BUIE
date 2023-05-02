@@ -17,8 +17,8 @@ namespace buie
 	public:
 
 		/// @brief Checks whether the object is currently pressed down.
-		/// @return True if object is pressed, false otherwise
-		bool isPressed() const;
+		/// @return True if the object is pressed, false otherwise
+		virtual bool isPressed() const;
 
 		/// @brief Checks whether the object was clicked and executes function with passed parameters if it was.
 		/// Also updates internal variable informing whether the object is clicked.
@@ -48,21 +48,21 @@ namespace buie
 		/// 
 		/// @param pointerPos Mouse pointer position
 		/// @param event SFML Event
-		/// @return True if object was pressed, false otherwise
-		bool isPressed(const sf::Vector2f& pointerPos, const sf::Event::EventType& event);
+		/// @return True if the object was pressed, false otherwise
+		virtual bool isPressed(const sf::Vector2f& pointerPos, const sf::Event::EventType& event);
 
 		/// @brief Checks whether the object was released.
 		/// Checks whether mouse button transition from pressed to released happened and if it happened within the object's global bounds.
 		/// 
 		/// @param pointerPos Mouse pointer position
 		/// @param SFML Event
-		/// @return True if object was released, false otherwise
-		bool isReleased(const sf::Vector2f& pointerPos, const sf::Event::EventType& event);
+		/// @return True if the object was released, false otherwise
+		virtual bool isReleased(const sf::Vector2f& pointerPos, const sf::Event::EventType& event);
 
 		/// @brief Checks whether pointer is hovering over the object's global bounds.
 		/// @param pointerPos Mouse pointer position
 		/// @return True if mouse pointer is hovering, false otherwise
-		bool isHovered(const sf::Vector2f& pointerPos) const;
+		virtual bool isHovered(const sf::Vector2f& pointerPos) const;
 
 	};
 

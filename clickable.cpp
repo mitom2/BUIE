@@ -16,7 +16,8 @@ bool buie::Clickable::isReleased(const sf::Vector2f& pointerPos, const sf::Event
 {
 	if (event != sf::Event::MouseButtonReleased)
 		return false;
-	return !(buie::Clickable::objectPressed = !(buie::Clickable::getGlobalBounds().contains(pointerPos)));
+	buie::Clickable::objectPressed = false;
+	return buie::Clickable::getGlobalBounds().contains(pointerPos);
 }
 
 bool buie::Clickable::isHovered(const sf::Vector2f& pointerPos) const
