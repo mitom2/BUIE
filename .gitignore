@@ -8,6 +8,7 @@ main.cpp
 *.vcxproj
 *.vcxproj.filters
 *.sln
+SFML-2.5.1/
 
 # User-specific files
 *.rsuser
