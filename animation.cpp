@@ -6,7 +6,7 @@ buie::Animation::Animation(const std::string& path, const std::string& extension
 	std::size_t i = 0;
 	while (true)
 	{
-		fileChecker.open("path/" + std::to_string(i) + extension);
+		fileChecker.open(path + (path[path.length() - 1] == '/' ? "" : "/") + std::to_string(i) + extension);
 		if (fileChecker.good() == false)
 			break;
 		buie::Animation::frames.push_back(new sf::Texture);

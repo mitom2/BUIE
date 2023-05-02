@@ -32,6 +32,8 @@ namespace buie
 		/// The source should be a directory containing all animation frames located in separate files, named in ascending order with arabic numerals.
 		/// Example: '0.png', '1.png', '2.png', '3.png'
 		/// 
+		/// It is highly recommended to use '/' as directory separator, other signs may cause undefined behaviour.
+		/// 
 		/// @param path Path to source directory
 		/// @param extension Image format used (with dot prefix)
 		Animation(const std::string& path, const std::string& extension);
