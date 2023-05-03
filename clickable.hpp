@@ -2,7 +2,6 @@
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
-#include <functional>
 
 namespace buie
 {
@@ -26,7 +25,7 @@ namespace buie
 		/// @tparam T Function
 		/// @tparam ...args Function parameters
 		/// @param pointerPos Mouse pointer position
-		/// @param event SFML Event
+		/// @param event SFML Event Type
 		/// @param functionPtr Function
 		/// @param ...params Function Parameters
 		template<class T, class... args>
@@ -47,7 +46,7 @@ namespace buie
 		/// Checks whether mouse button transition from released to pressed happened and if it happened within the object's global bounds.
 		/// 
 		/// @param pointerPos Mouse pointer position
-		/// @param event SFML Event
+		/// @param event SFML Event Type
 		/// @return True if the object was pressed, false otherwise
 		virtual bool isPressed(const sf::Vector2f& pointerPos, const sf::Event::EventType& event);
 
@@ -55,7 +54,7 @@ namespace buie
 		/// Checks whether mouse button transition from pressed to released happened and if it happened within the object's global bounds.
 		/// 
 		/// @param pointerPos Mouse pointer position
-		/// @param SFML Event
+		/// @param SFML Event Type
 		/// @return True if the object was released, false otherwise
 		virtual bool isReleased(const sf::Vector2f& pointerPos, const sf::Event::EventType& event);
 
